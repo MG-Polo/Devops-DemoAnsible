@@ -27,3 +27,15 @@ These VM's need to be in the file:
   - Router PFSense
 
 try again to ping all of your hosts
+
+Now try to run the playbooks and look what happens
+ansible-playbook intro_playbook.yml
+
+Now on the ubuntu servers you need to create the users John, Allex and Megan.
+Do this in one playbook.
+
+*Copy files to the servers -> create playbook
+*Change hostname of the firewall -> create playbook
+*setup webserver -> create playbook
+
+
