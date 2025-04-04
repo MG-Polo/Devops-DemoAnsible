@@ -1,7 +1,7 @@
 [firewall]
 192.168.1.1 ansible_user=admin ansible_ssh_pass=sp-admin1
 
-[client]
+[servers]
 192.168.1.3 ansible_user=super ansible_ssh_pass=sp-admin1 ansible_sudo_pass=sp-admin1
 192.168.1.5 ansible_user=super ansible_ssh_pass=sp-admin1 ansible_sudo_pass=sp-admin1
 
