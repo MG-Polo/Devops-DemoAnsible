@@ -34,7 +34,11 @@ ansible-playbook intro_playbook.yml
 Now on the ubuntu servers you need to create the users John, Allex and Megan.
 Do this in one playbook.
 
-*Copy files to the servers -> create playbook
+Next we need to copy some file to the servers.
+You can do this with the playbook CopyFile.yml
+The file is named dino.pic, this file needs to be in the file directory as specified in the playbook.
+After you run the playbook, connect to both servers and verify that the image is there.
+
 *Change hostname of the firewall -> create playbook
 *setup webserver -> create playbook
 
