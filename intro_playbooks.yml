@@ -1,0 +1,15 @@
+---
+- name: Intro to Ansible Playbooks
+  hosts: client
+
+  tasks:
+  - name: Add the user 'Bob'
+    ansible.builtin.user:
+      name: bob
+    become: yes
+    become_method: sudo
+  - name: Do some things more
+    apt:
+      force_apt_get: yes
+      upgrade: dist
+    become: yes
