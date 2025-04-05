@@ -39,6 +39,13 @@ You can do this with the playbook CopyFile.yml
 The file is named dino.pic, this file needs to be in the file directory as specified in the playbook.
 After you run the playbook, connect to both servers and verify that the image is there.
 
+For the next step we need to instal pfsensible on our Ansible host.
+Do this with the following command
+```
+ansible-galaxy collection install pfsensible.core
+```
+
+
 *Change hostname of the firewall -> create playbook
 *setup webserver -> create playbook
 
