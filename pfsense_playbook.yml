@@ -1,0 +1,13 @@
+---
+- name: Setup PFsense
+  hosts: firewall
+  tasks:
+  - name: allow port 80 open
+    pfsensible.core.pfsense_rule:
+      name: open port 80
+      interface: wan
+      action: pass
+      source: any
+      destination: 192.168.1.103
+      destination_port: 80
+      protocol: tcp/udp
