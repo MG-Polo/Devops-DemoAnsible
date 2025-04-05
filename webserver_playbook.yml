@@ -1,0 +1,21 @@
+--
+  - name: Set up a web server
+    hosts: client
+    become: true
+    tasks:
+      - name: Ensure Apache is installed
+        apt:
+          name: apache2
+          state: present
+
+      - name: Ensure Apache is running
+        service:
+          name: apache2
+          state: started
+          enabled: true
+
+      - name: Deploy custom index.html
+        copy:
+          src: /etc/ansible/index.html
+          dest: /var/www/html/index.html
+          mode: 0644
