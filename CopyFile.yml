@@ -1,8 +1,8 @@
 ---
-name: Install and configure nginx for static website hosting
-hosts: servers
-become: yes
-  tasks:
+- name: Install and configure nginx for static website hosting
+  hosts: servers
+  become: yes
+    tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
         src: /etc/ansible/dino.pic
