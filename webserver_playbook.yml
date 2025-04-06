@@ -1,6 +1,6 @@
 ---
   - name: Set up a web server
-    hosts: client
+    hosts: firewall
     become: true
     tasks:
       - name: Ensure Apache is installed
@@ -16,6 +16,6 @@
 
       - name: Deploy custom index.html
         copy:
-          src: /etc/ansible/index.html
+          src: /path/index.html
           dest: /var/www/html/index.html
           mode: 0644
