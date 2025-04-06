@@ -2,7 +2,7 @@
 - name: Copy the file to the server. Watch out the dino can bite!
   hosts: servers
   become: yes
-    tasks:
+  tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
         src: /etc/ansible/dino.pic
