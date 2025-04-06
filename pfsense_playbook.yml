@@ -4,10 +4,10 @@
   tasks:
   - name: "allow port 80 open"
     pfsensible.core.pfsense_nat_port_forward:
-      descr: 'port80'
+      descr: 'port[80]'
       interface: wan
-      source: any:80
-      destination: any:80
-      target: 192.168.1.103:80
+      source: any:[PORT]
+      destination: any:[PORT]
+      target: 192.168.1.103:[PORT]
       state: present
       protocol: tcp/udp
