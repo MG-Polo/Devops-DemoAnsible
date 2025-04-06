@@ -28,34 +28,49 @@ try to ping all of the hosts with ansible<br/>
 ansible -i hosts all -m ping
 ```
 
-Why doesn't it work? are your hosts the same as my hosts?<br/> 
-Make sure you have your PFSense data and your Ubuntu server data in the hosts file.
+#Why doesn't it work? 
+Are your hosts the same as my hosts?<br/> 
+Make sure you have your PFSense data and your Ubuntu server data in the hosts file.<br/> 
 These VM's need to be in the file:
   - Ubuntu server 1
   - Ubuntu server 2
   - Router PFSense
 
-try again to ping all of your hosts
+try again to ping all of your hosts<br/> 
 
+## Run the intro playbook
 Now try to run the playbooks and look what happens
+```
 ansible-playbook intro_playbook.yml
-
-Now on the ubuntu servers you need to create the users John, Allex and Megan.
+```
+# create users
+Now on the ubuntu servers you need to create the users John, Allex and Megan.<br/> 
 Do this in one playbook.
 
-Next we need to copy some file to the servers.
-You can do this with the playbook CopyFile.yml
-The file is named dino.pic, this file needs to be in the file directory as specified in the playbook.
-After you run the playbook, connect to both servers and verify that the image is there.
+## Copy files to the servers
+Next we need to copy some file to the servers.<br/> 
+You can do this with the playbook CopyFile.yml<br/> 
+The file is named dino.pic, this file needs to be in the file directory as specified in the playbook.<br/> 
+After you run the playbook, connect to both servers and verify that the image is there.<br/> 
 
-For the next step we need to instal pfsensible on our Ansible host.
+## PFSensible
+For the next step we need to instal pfsensible on our Ansible host.<br/> 
 Do this with the following command
 ```
 ansible-galaxy collection install pfsensible.core
 ```
 
+## PFSense playbook
+For the next steps we need to do some portforwarding on the PFSense.<br/>
+We need to do this for port 80 and 443.<br/> 
+Look at the PFSense playbook and edit it to do portforwarding for port 80 and 443
 
-*Change hostname of the firewall -> create playbook
-*setup webserver -> create playbook
+## Webserver
+Now we can create a webserver.
+In the hosts file create a group for the webserver. 
+This can be Ubuntu server 1 or 2. Make a wise choice ;).
+
+If you edited the hosts file, you can inspect the webserver playbook.
+Change what you need to change to make it work.
 
 
