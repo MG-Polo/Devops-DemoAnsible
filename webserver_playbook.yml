@@ -1,4 +1,4 @@
---
+---
   - name: Set up a web server
     hosts: client
     become: true
