@@ -51,7 +51,8 @@ Do this in one playbook.
 Next we need to copy some file to the servers.<br/> 
 You can do this with the playbook CopyFile.yml<br/> 
 The file is named dino.pic, this file needs to be in the file directory as specified in the playbook.<br/> 
-After you run the playbook, connect to both servers and verify that the image is there.<br/> 
+After you run the playbook, connect to both servers and verify that the image is there.<br/>
+If you want you can ofcourse create your own ASCII Art ;)
 
 ## PFSensible
 For the next step we need to instal pfsensible on our Ansible host.<br/> 
