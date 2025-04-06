@@ -66,11 +66,11 @@ We need to do this for port 80 and 443.<br/>
 Look at the PFSense playbook and edit it to do portforwarding for port 80 and 443
 
 ## Webserver
-Now we can create a webserver.
-In the hosts file create a group for the webserver. 
-This can be Ubuntu server 1 or 2. Make a wise choice ;).
+Now we can create a webserver.<br/>
+In the hosts file create a group for the webserver. <br/>
+This can be Ubuntu server 1 or 2. Make a wise choice ;).<br/>
 
-If you edited the hosts file, you can inspect the webserver playbook.
-Change what you need to change to make it work.
+If you edited the hosts file, you can inspect the webserver playbook.<br/>
+Change what you need to change to make it work.<br/>
 
 
