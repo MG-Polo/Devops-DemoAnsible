@@ -1,5 +1,5 @@
 ---
-- name: Install and configure nginx for static website hosting
+- name: Copy the file to the server. Watch out the dino can bite!
   hosts: servers
   become: yes
     tasks:
